@@ -1,1 +1,34 @@
 <p>confirm-order works!</p>
+<style>
+    td {
+      padding: 10px;
+    }
+  
+    table {
+      border-spacing: 10px;
+      border-collapse: separate;
+    }
+  
+  </style>
+  <table>
+    <tr>
+      <td>No.</td>
+      <td>Name</td>
+      <td>End Date</td>
+      <td>End Time</td>
+      <td>Option</td>
+    </tr>
+    <tr *ngFor="let order of orders; let i=index ">
+      <td>{{i+1}}</td>
+      <td>{{order.name}}</td>
+      <td>{{order.enddate}}</td>
+      <td>{{order.endtime}}</td>
+      <td>
+        <input type="text" [(ngModel)]='customerName' placeholder="Enter Your Name">
+        <br><br>
+        <input type="file" (change)="orderAdd($event)">
+        <br><br>
+        <button (click)="handleSubmit($event, order._id)">Add</button>
+      </td>
+    </tr>
+  </table>
