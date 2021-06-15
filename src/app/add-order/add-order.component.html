@@ -1,1 +1,14 @@
 <p>add-order works!</p>
+<p>Add Your Order</p>
+<input type="order" (change)= "orderAdd($event)">
+<br>
+<p>Select a Time</p>
+<p>
+    Date: <input type='date' [(ngModel)]='date'>
+  </p>
+  <p>
+    Time: <input type="time" [(ngModel)]='time'>
+  </p>
+  <p>Order Title: {{orderName :: 'No Order Yet'}}</p>
+  <input type="submit" (click)="handleSubmit($event)"
+

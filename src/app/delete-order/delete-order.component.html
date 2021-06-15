@@ -1,1 +1,29 @@
 <p>delete-order works!</p>
+<style>
+    td {
+      padding: 10px;
+    }
+  
+    table {
+      border-spacing: 10px;
+      border-collapse: separate;
+    }
+  
+  </style>
+  
+  <table>
+    <tr>
+      <td>No.</td>
+      <td>Name</td>
+      <td>End Date</td>
+      <td>End Time</td>
+      <td>Option</td>
+    </tr>
+    <tr *ngFor="let order of orders; let i=index ">
+      <td>{{i+1}}</td>
+      <td>{{order.name}}</td>
+      <td>{{order.enddate}}</td>
+      <td>{{order.endtime}}</td>
+      <td><button (click)="handleDelete($event, order._id)">Delete</button></td>
+    </tr>
+  </table>
