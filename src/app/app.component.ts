@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Welcome To App';
-  name = 'Asad';
+  name = 'Varda Quraishi';
   var = 'two way data binding';
 
   save(){
